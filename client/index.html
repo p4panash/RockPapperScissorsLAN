@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Rock Papper Scissors LAN ! </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  </head>
+  <body>
+    <div class="title">
+      <h1 class="firstTitle">Rock Papper Scissors</h1>
+      <h1 class="secondTitle"><span>LAN Edition</span></h1>
+    </div>
+    <div class="announcer" style="display:none;">
+      <p id="announcer"> Announcer !</p>
+    </div>
+    <div class="gameScreen">
+      <div class="nameSelection">
+        <p>Choose your name !</p>
+        <input type="text" id="playerName" maxlength="13">
+        <button id="playerNameButton">Select name</button>
+      </div>
+      <div class="player" style="display:none;">
+        <div class="infoP">
+          <p class="type">You</p>
+          <div class="info">
+            <p class="name" id="nameP">Player_Name</p>
+            <div class="score">
+              <div class="group">
+                <p class="win">W</p>
+                <p id="winsP">NaN</p>
+              </div>
+              <div class="group">
+                <p class="lose">L</p>
+                <p id="lossesP">NaN</p>
+              </div>
+              <div class="group">
+                <p class="tie">T</p>
+                <p id="tiesP">NaN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <img class="btn" id="rock" src="img/rock.png">
+          <img class="btn" id="papper" src="img/papper.png">
+          <img class="btn" id="scissors" src="img/scissors.png">
+        </div>
+      </div>
+      <div class="history" id="battleHistory" style="display:none;"></div>
+      <div class="player" style="display:none;">
+        <div class="buttons">
+          <img class="btn" id="rockE" src="img/rockE.png">
+          <img class="btn" id="papperE" src="img/papperE.png">
+          <img class="btn" id="scissorsE" src="img/scissorsE.png">
+        </div>
+        <div class="infoP">
+          <p class="type">Adversary</p>
+          <div class="info">
+            <p class="name" id="nameE">Adversary_Name</p>
+            <div class="score">
+              <div class="group">
+                <p class="win">W</p>
+                <p id="winsE">NaN</p>
+              </div>
+              <div class="group">
+                <p class="lose">L</p>
+                <p id="lossesE">NaN</p>
+              </div>
+              <div class="group">
+                <p class="tie">T</p>
+                <p id="tiesE">NaN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gameType" style="display:none;">
+      <button id="playCOM"> Play against Computer ! </button>
+      <button id="pVp"> Play against Player ! </button>
+    </div>
+    <div class="gameEnd" style="display:none;">
+      <div class="container">
+        <p id="endAnnouncer"> Announcer </p>
+        <div id="loader"></div>
+        <div class="buttons">
+          <button id="exitLoby"> Exit to loby </button>
+          <button id="rematch"> Rematch ! </button>
+        </div>
+      </div>
+    </div>
+    <div class="waiting" style="display:none;">
+      <div class="container">
+        <p id="endAnnouncer"> Looking for other player... </p>
+        <div id="loader"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="./js/client.js"></script>

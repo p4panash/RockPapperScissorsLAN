@@ -1,0 +1,274 @@
+:root {
+  --primary-color: #3f99e2;
+  --secondary-color: #42a4f4;
+  --border-color: #dfdfdf;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+.title {
+  align-items: center;
+}
+
+.title h1 {
+  text-align: center;
+}
+
+.title .firstTitle {
+  font-size: 30px;
+}
+
+.title .secondTitle {
+  position: relative;
+  font-size: 17px;
+  z-index: 1;
+}
+
+.title .secondTitle::before {
+  border-top: 1px solid var(--border-color);
+  content:"";
+  position: absolute;
+  top: 50%; left: 0; right: 0; bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.title span {
+  background: var(--primary-color);
+  padding: 0 15px;
+}
+
+.nameSelection {
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nameSelection p {
+  font-size: 18px;
+}
+
+.nameSelection input {
+  display: block;
+  margin: auto;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  font-size: 20px;
+}
+
+.nameSelection button {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.gameScreen {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+.group {
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.group p {
+  text-align: center;
+}
+
+.history {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  overflow-y: scroll;
+  width: 35%;
+  height: 250px;
+}
+
+.history p {
+  margin-left: 10px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.history .battleResult {
+  font-weight: bold;
+  color: white;
+}
+
+.buttons {
+  display: inline-block;
+}
+
+.buttons .btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 35%;
+  height: 35%;
+}
+
+#rock:hover {
+  content: url('/img/rock_hover.png');
+}
+
+#papper:hover {
+  content: url('/img/papper_hover.png');
+}
+
+#scissors:hover {
+  content: url('/img/scissors_hover.png');
+}
+
+.infoP {
+  width: 130px;
+}
+
+.infoP p {
+  text-align: center;
+}
+
+.info {
+  width: 130px;
+  display: inline-block;
+  border: 1px solid var(--border-color);
+}
+
+.type {
+  margin: 0;
+  margin-bottom: 3px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.name {
+  font-size: 17px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.win {
+  color: green;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.lose {
+  color: red;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.tie {
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.announcer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcer p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.gameType {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.gameType button {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  margin: 7px;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.gameEnd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 20%;
+  height: 20%;
+  background-color: rgba(223, 223, 223, 0.6);
+  bottom: 50%;
+  right: 40%;
+  border-radius: 10px;
+}
+
+.gameEnd button {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  margin: 7px;
+  padding: 5px;
+}
+
+.gameEnd p {
+  text-align: center;
+  font-weight: bold;
+}
+
+#loader {
+  display: none;
+  border: 3px solid var(--border-color);
+  border-top: 3px solid var(--secondary-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.waiting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 20%;
+  height: 20%;
+  background-color: rgba(223, 223, 223, 0.6);
+  bottom: 50%;
+  right: 40%;
+  border-radius: 10px;
+}
